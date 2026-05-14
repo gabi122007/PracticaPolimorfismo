@@ -1,4 +1,4 @@
-package ni.edu.uam;
+package ni.edu.uam.sistemaAnimales;
 
 public class Perro extends Animal {
     @Override
