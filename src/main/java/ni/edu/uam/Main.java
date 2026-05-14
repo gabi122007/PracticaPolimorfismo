@@ -6,12 +6,17 @@ import ni.edu.uam.sistemaAnimales.Animal;
 import ni.edu.uam.sistemaAnimales.Gato;
 import ni.edu.uam.sistemaAnimales.Perro;
 import ni.edu.uam.sistemaAnimales.Vaca;
+import ni.edu.uam.vehiculos.Bicicleta;
+import ni.edu.uam.vehiculos.Carro;
+import ni.edu.uam.vehiculos.Moto;
+import ni.edu.uam.vehiculos.Vehiculo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Sonidos de los animales:");
         Animal[] animales = {new Perro(), new Gato(), new Vaca()};
         for (Animal animal : animales) {
             animal.hacerSonido();
@@ -26,5 +31,20 @@ public class Main {
         for (Empleado empleado : empleados) {
             System.out.println(empleado.getNombre() + " gana: " + empleado.calcularSalario());
         }
+
+        Vehiculo carro = new Carro();
+        Vehiculo moto = new Moto();
+        Vehiculo bicicleta = new Bicicleta();
+
+        System.out.println("\nMovimientos de los vehículos:");
+
+        iniciarMovimiento(carro);
+        iniciarMovimiento(moto);
+        iniciarMovimiento(bicicleta);
+    }
+
+    public static void iniciarMovimiento(Vehiculo vehiculo) {
+        vehiculo.mover();
+
     }
 }
